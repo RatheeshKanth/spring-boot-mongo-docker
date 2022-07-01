@@ -35,34 +35,6 @@ spec:
     
 
 apiVersion: v1
-kind: ReplicationController
-metadata:
-  labels:
-    name: mongo
-  name: mongo-controller
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        name: mongo
-    spec:
-      containers:
-      - image: mongo
-        name: mongo
-        ports:
-        - name: mongo
-          containerPort: 27017
-          hostPort: 27017
-         volumeMounts:
-         - name: mongo-pvc
-           mountPath: /data/db
-        volumes:
-       - name: mongo-pvc
-         hostPath:
-          path: /tmp/dbbackup
-
-apiVersion: v1
 kind: Service
 metadata:
   name: mongo
