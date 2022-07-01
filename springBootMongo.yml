@@ -1,4 +1,4 @@
-apiVersion: extensions/v1
+apiVersion: v1
 kind: Deployment
 metadata:
   labels:
@@ -19,7 +19,7 @@ spec:
           containerPort: 8080  
 ---
 # Node Port Service
-apiVersion: extensions/v1
+apiVersion: v1
 kind: Service
 metadata:
   labels:
@@ -34,7 +34,7 @@ spec:
     name: springboot
     
 -----
-apiVersion: extensions/v1
+apiVersion: v1
 kind: Deployment
 metadata:
   labels:
@@ -62,7 +62,7 @@ spec:
          hostPath:
           path: /tmp/dbbackup
 -----
-apiVersion: extensions/v1
+apiVersion: v1
 kind: Service
 metadata:
   name: mongo
