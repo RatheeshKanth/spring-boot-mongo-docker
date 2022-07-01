@@ -13,7 +13,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: dockerhandson/spring-boot-mango
+      - image: ratheeshkanth/spring-boot-mango
         name: springboot
         ports:
         - name: springboot
